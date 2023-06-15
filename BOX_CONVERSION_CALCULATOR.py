@@ -188,19 +188,6 @@ class OptionChain():
         import requests 
 
         headers = { 
-            'authority': 'www.nasdaq.com', 
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 
-            'accept-language': 'es-ES,es;q=0.9', 
-            'cache-control': 'max-age=0', 
-            'referer': 'https://www.nasdaq.com/market-activity/stocks/aapl', 
-            'sec-ch-ua': '"Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"', 
-            'sec-ch-ua-mobile': '?0', 
-            'sec-ch-ua-platform': '"Windows"', 
-            'sec-fetch-dest': 'document', 
-            'sec-fetch-mode': 'navigate', 
-            'sec-fetch-site': 'same-origin', 
-            'sec-fetch-user': '?1', 
-            'upgrade-insecure-requests': '1', 
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36', 
         } 
          
@@ -461,8 +448,8 @@ class OptionChain():
 # cleantype[1] i cleantype[2] límits % strike maxim i minim a mantenir
 # source = 'NSDQ' , 'YF' o 'CBOE'
 
-OBJ = OptionChain('GOOG', multiplier = 100.00, cleantype = [1,1.6,0.7])
-
+OBJ = OptionChain('PBR', multiplier = 100.00, cleantype = [1,1.6,0.7])
+OBJ.dividends
 ### PER A STOCKS 'NORMALS' ESTRATEGIA LONG ACCIONS - SHORT OPCIONS
 ## ESTA PENDENT DE VEURE COM ES PODRIEN INCLOURE ELS DIVIDENDS PREVISTOS PER EL CALCUL DE LA RENTABILITAT
 MSFT_NSDQ = OptionChain('MSFT', multiplier = 100.00, cleantype = [1, 1.5, 0.5], source = 'NSDQ')
