@@ -8,7 +8,7 @@ from BOX_CONVERSION_CALCULATOR import OptionChain
 # Es passa el ticker per la funcio (si cal modificar el multipliocador per defete de 100)
 # cleantype[0] si 0 elimina les files amb zeros. Si 1 subsitueix per 0,01
 # cleantype[1] i cleantype[2] límits % strike maxim i minim a mantenir
-# source = 'NSDQ' , 'YF' o 'CBOE'
+# source = 'NSDQ' , 'YF' (o 'CBOE' pendiente implementar)
 
 OBJ = OptionChain('PBR', multiplier = 100.00, cleantype = [1,1.6,0.7])
 OBJ.dividends
