@@ -9,19 +9,16 @@ PER BUSCAR LES MILLORS COMBINACIONS DE BOX's i CONVERSIONS PER RETORN ANUALITZAT
 
 import pandas as pd
 import yfinance as yf
-
+import requests 
 import datetime
-
 import numpy as np
 from itertools import product
-
 from enum import Enum
 
 cleantype_arg = Enum('cleantype', {'delzeros': 0, 'subszeros': 1})
 
 # ticker = yf.Ticker('SPY')
 # optchains = ticker.option_chain('2023-06-01')
-
 # dir(ticker)
 
 
@@ -185,8 +182,6 @@ class OptionChain():
         Descarrega i ajusta els Dataframes de les cadenes amb les columnes que s'utilitzen
         S'obté un diccionari de dataframes. Cada dataframe es un OptionChain de cada venciment
         '''
-        import requests 
-
         headers = { 
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36', 
         } 
