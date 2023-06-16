@@ -285,7 +285,7 @@ class OptionChain():
         return ticker_price
         
 
-    def __short_Future_Synth(self, order = 'mid'):
+    def __short_Future_Synth(self, order = 'mkt'):
         '''
         Inclou a les OptionChains columnes amb la prima i preu de cada futur sintetic Short en cada strike
         Es pot triar si treballar amb preu de mercat ('mkt') o preu mig ('mid')
@@ -306,7 +306,7 @@ class OptionChain():
         print('Futuros Synth Cortos calculados')
 
 
-    def __long_Future_Synth(self, order = 'mid'):
+    def __long_Future_Synth(self, order = 'mkt'):
         '''
         Inclou a les OptionChains columnes amb la prima i preu de cada futur sintetic Long en cada strike
         Es pot triar si treballar amb preu de mercat ('mkt') o preu mig ('mid')
